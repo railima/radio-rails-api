@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   devise_for :admin_users, ActiveAdmin::Devise.config
   scope ':locale', locale: /pt-BR|en/, defaults: { locale: 'pt-BR' } do
     ActiveAdmin.routes(self)
